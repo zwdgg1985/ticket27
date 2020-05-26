@@ -1,0 +1,11 @@
+name: repodispatch1
+on: 
+  repository_dispatch:
+    types: [eventA]
+  
+jobs:
+  job1:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
