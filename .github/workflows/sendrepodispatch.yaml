@@ -8,8 +8,8 @@ jobs:
   slash-command-dispatch:
     runs-on: ubuntu-latest
     steps:
-      - name: Slash Command Dispatch
-        uses: peter-evans/slash-command-dispatch@v1
+      - name: Repository Dispatch
+        uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          commands: flake8-lint, black-check
+          event-type: my-event
