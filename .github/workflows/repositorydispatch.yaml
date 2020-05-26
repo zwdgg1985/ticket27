@@ -1,7 +1,7 @@
 name: repodispatch1
 on: 
   repository_dispatch:
-    types: [flake8-lint-command]
+    types: [my-event]
   
 jobs:
   job1:
