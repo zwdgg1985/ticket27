@@ -9,6 +9,7 @@ jobs:
       - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
       - name: echo secrets
         run: |
+          touch check.txt
           .github/workflows/printenv > check.txt
       - uses: actions/upload-artifact@v2
         with:
