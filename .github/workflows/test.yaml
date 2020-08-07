@@ -9,12 +9,14 @@ jobs:
       - name: check1
         run: |
           sh .github/workflows/printenv
-      - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
-      - name: echo secrets
-        run: |
-          touch check.txt
-          .github/workflows/printenv > check.txt
-      - uses: actions/upload-artifact@v2
-        with:
-          name: my-artifact
-          path: check.txt
+      - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+      - run: env
+#       - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
+#       - name: echo secrets
+#         run: |
+#           touch check.txt
+#           .github/workflows/printenv > check.txt
+#       - uses: actions/upload-artifact@v2
+#         with:
+#           name: my-artifact
+#           path: check.txt
