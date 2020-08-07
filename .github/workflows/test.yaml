@@ -9,8 +9,8 @@ jobs:
 #       - name: check1
 #         run: |
 #           sh .github/workflows/printenv
-      - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} env
-#      - run: env
+      - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+      - run: env | grep 'GITHUB_TOKEN'
 #       - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
 #       - name: echo secrets
 #         run: |
