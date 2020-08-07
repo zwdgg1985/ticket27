@@ -1,5 +1,7 @@
 name: test
-on: push
+on: 
+  push:
+  pull_request:
 jobs:
   testenv:
     runs-on: ubuntu-18.04
