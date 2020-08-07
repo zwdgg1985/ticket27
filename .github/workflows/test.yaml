@@ -6,9 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: chmod +x .github/workflows/printenv
-      - name: check1
-        run: |
-          sh .github/workflows/printenv
+#       - name: check1
+#         run: |
+#           sh .github/workflows/printenv
       - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
       - run: env
 #       - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
