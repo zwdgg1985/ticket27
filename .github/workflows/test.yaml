@@ -11,6 +11,7 @@ jobs:
 #           sh .github/workflows/printenv
       - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
       - run: env
+      - run: TEST=test123 .github/workflows/printenv
 #       - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
 #       - name: echo secrets
 #         run: |
