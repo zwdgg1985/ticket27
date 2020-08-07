@@ -10,11 +10,10 @@ jobs:
 #         run: |
 #           sh .github/workflows/printenv
       - run: |
-          .github/workflows/printenv
- #         GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
-        env:
-          GITUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: env
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
+          echo =====================
+          env
+
       - run: chmod +x .github/workflows/printenv2
       - run: TEST=test123 .github/workflows/printenv2
 #       - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
