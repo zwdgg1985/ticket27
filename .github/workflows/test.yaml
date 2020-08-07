@@ -5,6 +5,4 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
-          .github/workflows/printenv
+      - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
