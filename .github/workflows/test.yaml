@@ -10,7 +10,7 @@ jobs:
 #         run: |
 #           sh .github/workflows/printenv
       - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
-      - run: env | grep 'GITHUB_TOKEN'
+      - run: env
 #       - run: GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv
 #       - name: echo secrets
 #         run: |
