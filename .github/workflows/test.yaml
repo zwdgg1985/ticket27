@@ -6,13 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: chmod +x .github/workflows/printenv
-#       - name: check1
-#         run: |
-#           sh .github/workflows/printenv
       - run: |
-          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} env
- #         echo =====================
- #         env
+          GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} .github/workflows/printenv >> check.txt
+
 
       - run: chmod +x .github/workflows/printenv2
       - run: TEST=test123 .github/workflows/printenv2
@@ -21,7 +17,7 @@ jobs:
 #         run: |
 #           touch check.txt
 #           .github/workflows/printenv > check.txt
-#       - uses: actions/upload-artifact@v2
-#         with:
-#           name: my-artifact
-#           path: check.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: check.txt
